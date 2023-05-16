@@ -9,14 +9,12 @@ while True:
             todo = input()
             todos.append(todo)
         case 'show':
-            for item in todos:
+            for index, item in enumerate(todos):
                 item = item.capitalize()
-                print(item)
+                print(index, '-', item)
         case 'edit':
             existing_todo_index = int(input('Number of todo to edit: '))
-            # existing_todo = todos[existing_todo_index-1]
             edited_todo = input('Edit your todo now: ')
-            # todos.insert(existing_todo_index-1, edited_todo)
             todos[existing_todo_index-1] = edited_todo
         case 'exit':
             break
